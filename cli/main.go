@@ -6,7 +6,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/Shakarang/File2QRCode/models"
+	"github.com/Shakarang/File2QRCode/cli/models"
 
 	qrcode "github.com/skip2/go-qrcode"
 	"github.com/urfave/cli"
@@ -90,12 +90,10 @@ func createCodesFromStrings(data *[]string, destination *string) {
 			panic(err.Error())
 		}
 		if *destination != "" {
-			fmt.Println("Destination", *destination)
 			if err := ioutil.WriteFile(fmt.Sprintf("%v/%v.png", *destination, index+1), pngData, 0644); err != nil {
 				panic(err)
 			}
 		} else {
-			fmt.Println("Destination NIL")
 			if err := ioutil.WriteFile(fmt.Sprintf("%v.png", index+1), pngData, 0644); err != nil {
 				panic(err)
 			}
