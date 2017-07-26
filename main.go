@@ -1,11 +1,12 @@
 package main
 
 import (
-	"QRcodeTest/models"
 	"fmt"
 	"io/ioutil"
 	"os"
 	"strings"
+
+	"github.com/Shakarang/File2QRCode/models"
 
 	qrcode "github.com/skip2/go-qrcode"
 	"github.com/urfave/cli"
