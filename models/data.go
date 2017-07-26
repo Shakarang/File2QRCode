@@ -13,12 +13,14 @@ type Data struct {
 	Content string `json:"content"`
 }
 
+// Hasher to generate SHA256
 var hasher hash.Hash
 
 func init() {
 	hasher = sha256.New()
 }
 
+// Checksum generates the SHA256 of the current Data structure
 func (d *Data) Checksum() string {
 	jsn, err := json.Marshal(d)
 	if err != nil {

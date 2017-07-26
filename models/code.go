@@ -8,7 +8,8 @@ type Code struct {
 	Checksum string `json:"checksum"`
 }
 
-func (c *Code) Json() string {
+// JSON returns the current Code struct in JSON
+func (c *Code) JSON() string {
 	jsn, err := json.Marshal(c)
 	if err != nil {
 		panic(err.Error())

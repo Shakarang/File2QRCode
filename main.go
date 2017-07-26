@@ -85,7 +85,7 @@ func createCodesFromStrings(data *[]string, destination *string) {
 			Data:     data,
 			Checksum: data.Checksum(),
 		}
-		pngData, err := qrcode.Encode(code.Json(), qrcode.Medium, 1024)
+		pngData, err := qrcode.Encode(code.JSON(), qrcode.Medium, 1024)
 		if err != nil {
 			panic(err.Error())
 		}
