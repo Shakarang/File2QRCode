@@ -80,7 +80,7 @@ func splitIntoSubstrings(data *[]byte) *[]string {
 func createCodesFromStrings(data *[]string, destination *string) {
 
 	for index, element := range *data {
-		data := models.Data{ID: index, Content: element}
+		data := models.Data{ID: index, Content: element, Elements: len(*data)}
 		code := models.Code{
 			Data:     data,
 			Checksum: data.Checksum(),

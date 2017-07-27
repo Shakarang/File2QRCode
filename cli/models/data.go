@@ -9,8 +9,9 @@ import (
 
 // Data represents the position of the data inside the original file and the content
 type Data struct {
-	ID      int    `json:"id"`
-	Content string `json:"content"`
+	ID       int    `json:"id"`
+	Content  string `json:"content"`
+	Elements int    `json:"elements"`
 }
 
 // Hasher to generate SHA256
