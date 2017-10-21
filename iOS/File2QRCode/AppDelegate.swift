@@ -18,9 +18,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 		self.window = UIWindow(frame: UIScreen.main.bounds)
 
-		self.window?.rootViewController = MainViewController.build()
+		let navigationController = UINavigationController(rootViewController: MainViewController.build())
+
+		self.window?.rootViewController = navigationController
 
 		self.window?.makeKeyAndVisible()
+
+		UIApplication.shared.keyWindow?.tintColor = UIColor.mainColor
 
 		return true
 	}
