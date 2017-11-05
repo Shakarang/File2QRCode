@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"io/ioutil"
 	"os"
-	// "strings"
 
 	"github.com/Shakarang/File2QRCode/cli/models"
 
@@ -38,7 +37,10 @@ func main() {
 	}
 
 	app.Action = func(c *cli.Context) error {
-		if c.String("split") == filePath {
+
+		if len(filePath) == 0 {
+			cli.ShowAppHelp(c)
+		} else if c.String("split") == filePath {
 			data := getFileData(filePath)
 			subs := splitIntoSubstrings(data)
 			createCodesFromStrings(subs, &destination)
@@ -91,6 +93,7 @@ func createCodesFromStrings(data *[]string, destination *string) {
 			panic(err.Error())
 		}
 		if *destination != "" {
+			os.MkdirAll(*destination, os.ModePerm)
 			if err := ioutil.WriteFile(fmt.Sprintf("%v/%v.png", *destination, index+1), pngData, 0644); err != nil {
 				panic(err)
 			}
