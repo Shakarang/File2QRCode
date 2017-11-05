@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"io/ioutil"
 	"os"
-	"strings"
+	// "strings"
 
 	"github.com/Shakarang/File2QRCode/cli/models"
 
@@ -12,7 +12,7 @@ import (
 	"github.com/urfave/cli"
 )
 
-const limit = 1400
+const limit = 100
 
 func main() {
 
@@ -52,8 +52,9 @@ func main() {
 func getFileData(filename string) *[]byte {
 
 	fileData, err := ioutil.ReadFile(filename)
+
 	if err != nil {
-		panic("The file given cannot be opened.")
+		panic(err)
 	}
 	return &fileData
 }
@@ -61,24 +62,24 @@ func getFileData(filename string) *[]byte {
 func splitIntoSubstrings(data *[]byte) *[]string {
 
 	var content []string
-	var tmpString string
+	var tmpArray = string(*data)
+	var tmpLimit = limit
 
-	splitted := strings.Split(string(*data), "\n")
+	if len(tmpArray) < tmpLimit {
+		tmpLimit = len(tmpArray)
+	}
 
-	for _, s := range splitted {
-		if (len(tmpString) + len(s)) < limit {
-			tmpString += s
-			continue
+	for index := 0; index < len(tmpArray); index += tmpLimit {
+		if len(tmpArray) < (index + tmpLimit) {
+			tmpLimit = len(tmpArray) - index
 		}
-		content = append(content, tmpString)
-		tmpString = ""
+		content = append(content, tmpArray[index:index+tmpLimit])
 	}
 
 	return &content
 }
 
 func createCodesFromStrings(data *[]string, destination *string) {
-
 	for index, element := range *data {
 		data := models.Data{ID: index, Content: element, Elements: len(*data)}
 		code := models.Code{
