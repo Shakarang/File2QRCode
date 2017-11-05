@@ -39,7 +39,6 @@ class NoScanView: UIView {
 		// Description
 		self.descriptionLabel.text = "Scan all your QR codes generated with File2QRCode desktop application in order to retrieve your entire file."
 
-
 		// Github link
 		let underlineAttribute = [NSAttributedStringKey.underlineStyle: NSUnderlineStyle.styleSingle.rawValue]
 		let githubLinkString = NSAttributedString(string: self.githubRepoString, attributes: underlineAttribute)
@@ -55,7 +54,7 @@ class NoScanView: UIView {
 		let svc = SFSafariViewController(url: URL(string: self.githubRepoString)!)
 
 		var topVC = UIApplication.shared.keyWindow?.rootViewController
-		while((topVC!.presentedViewController) != nil) {
+		while topVC!.presentedViewController != nil {
 			topVC = topVC!.presentedViewController
 		}
 		topVC?.present(svc, animated: true, completion: nil)

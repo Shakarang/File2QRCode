@@ -45,12 +45,27 @@ final class MainViewController: UIViewController {
 			break
 		}
 	}
+
+	@IBAction func scanButtonPressed(_ sender: Any) {
+		let vc = ScannerViewController.build()
+		vc.delegate = self
+	self.navigationController?.pushViewController(vc, animated: true)
+	}
 }
 
 // MARK: - ScannerViewControllerDelegate
 extension MainViewController: ScannerViewControllerDelegate {
 	func didFind(value: String) {
-		print("Found value")
+
+		let decoder = JSONDecoder()
+		do {
+			let data = value.data(using: .utf8)!
+			let code = try decoder.decode(QRCode.self, from: data)
+			print(code)
+		} catch let e {
+			print(e)
+		}
+
 	}
 }
 

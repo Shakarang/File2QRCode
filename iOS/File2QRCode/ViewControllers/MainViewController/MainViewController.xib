@@ -31,6 +31,9 @@
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                     <state key="normal" title="Scan"/>
+                    <connections>
+                        <action selector="scanButtonPressed:" destination="-1" eventType="touchUpInside" id="Mck-Jd-vP8"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
