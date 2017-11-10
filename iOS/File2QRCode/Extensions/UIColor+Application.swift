@@ -21,4 +21,12 @@ extension UIColor {
 		return .mainColor
 	}
 
+	static var validColor: UIColor {
+		return UIColor(red: 46.0/255.0, green: 204.0/255.0, blue: 113.0/255.0, alpha: 1.0)
+	}
+
+	static var errorColor: UIColor {
+		return UIColor(red: 231.0/255.0, green: 76.0/255.0, blue: 60.0/255.0, alpha: 1.0)
+	}
+
 }

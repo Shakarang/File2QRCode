@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		797076351FB62D000043F200 /* StatusCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797076331FB62D000043F200 /* StatusCollectionViewCell.swift */; };
+		797076361FB62D000043F200 /* StatusCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 797076341FB62D000043F200 /* StatusCollectionViewCell.xib */; };
 		798683E11F9B96EC00D7EE79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798683E01F9B96EC00D7EE79 /* AppDelegate.swift */; };
 		798683E81F9B96EC00D7EE79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 798683E71F9B96EC00D7EE79 /* Assets.xcassets */; };
 		798683EB1F9B96EC00D7EE79 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 798683E91F9B96EC00D7EE79 /* LaunchScreen.storyboard */; };
@@ -23,9 +25,13 @@
 		79A05D651F9BCDCD0004BF9B /* NoScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A05D641F9BCDCD0004BF9B /* NoScanView.swift */; };
 		79A05D671F9BD54B0004BF9B /* UIView+Initialisation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A05D661F9BD54B0004BF9B /* UIView+Initialisation.swift */; };
 		79A05D6B1F9BF0270004BF9B /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A05D6A1F9BF0270004BF9B /* ActionButton.swift */; };
+		79F16A451FB10543004AEC9C /* ScannerStatusView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79F16A441FB10543004AEC9C /* ScannerStatusView.xib */; };
+		79F16A471FB1054B004AEC9C /* ScannerStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F16A461FB1054B004AEC9C /* ScannerStatusView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		797076331FB62D000043F200 /* StatusCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StatusCollectionViewCell.swift; path = StatusUICollectionViewCell/StatusCollectionViewCell.swift; sourceTree = "<group>"; };
+		797076341FB62D000043F200 /* StatusCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = StatusCollectionViewCell.xib; path = StatusUICollectionViewCell/StatusCollectionViewCell.xib; sourceTree = "<group>"; };
 		798683DD1F9B96EC00D7EE79 /* File2QRCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = File2QRCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		798683E01F9B96EC00D7EE79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		798683E71F9B96EC00D7EE79 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -44,6 +50,8 @@
 		79A05D641F9BCDCD0004BF9B /* NoScanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoScanView.swift; sourceTree = "<group>"; };
 		79A05D661F9BD54B0004BF9B /* UIView+Initialisation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Initialisation.swift"; sourceTree = "<group>"; };
 		79A05D6A1F9BF0270004BF9B /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
+		79F16A441FB10543004AEC9C /* ScannerStatusView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScannerStatusView.xib; sourceTree = "<group>"; };
+		79F16A461FB1054B004AEC9C /* ScannerStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerStatusView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +65,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		797076321FB62CDE0043F200 /* UICollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				797076331FB62D000043F200 /* StatusCollectionViewCell.swift */,
+				797076341FB62D000043F200 /* StatusCollectionViewCell.xib */,
+			);
+			path = UICollectionViewCells;
+			sourceTree = "<group>";
+		};
 		798683D41F9B96EC00D7EE79 = {
 			isa = PBXGroup;
 			children = (
@@ -146,6 +163,7 @@
 		79A05D601F9BCD850004BF9B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				797076321FB62CDE0043F200 /* UICollectionViewCells */,
 				79A05D691F9BF00F0004BF9B /* UIButtons */,
 				79A05D681F9BEFFD0004BF9B /* UIViews */,
 			);
@@ -155,8 +173,8 @@
 		79A05D611F9BCD9A0004BF9B /* NoScanView */ = {
 			isa = PBXGroup;
 			children = (
-				79A05D621F9BCDBE0004BF9B /* NoScanView.xib */,
 				79A05D641F9BCDCD0004BF9B /* NoScanView.swift */,
+				79A05D621F9BCDBE0004BF9B /* NoScanView.xib */,
 			);
 			path = NoScanView;
 			sourceTree = "<group>";
@@ -164,6 +182,7 @@
 		79A05D681F9BEFFD0004BF9B /* UIViews */ = {
 			isa = PBXGroup;
 			children = (
+				79F16A431FB10524004AEC9C /* ScannerStatusView */,
 				79A05D611F9BCD9A0004BF9B /* NoScanView */,
 			);
 			path = UIViews;
@@ -175,6 +194,15 @@
 				79A05D6A1F9BF0270004BF9B /* ActionButton.swift */,
 			);
 			path = UIButtons;
+			sourceTree = "<group>";
+		};
+		79F16A431FB10524004AEC9C /* ScannerStatusView */ = {
+			isa = PBXGroup;
+			children = (
+				79F16A461FB1054B004AEC9C /* ScannerStatusView.swift */,
+				79F16A441FB10543004AEC9C /* ScannerStatusView.xib */,
+			);
+			path = ScannerStatusView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,6 +265,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				797076361FB62D000043F200 /* StatusCollectionViewCell.xib in Resources */,
+				79F16A451FB10543004AEC9C /* ScannerStatusView.xib in Resources */,
 				798683EB1F9B96EC00D7EE79 /* LaunchScreen.storyboard in Resources */,
 				798683E81F9B96EC00D7EE79 /* Assets.xcassets in Resources */,
 				79A05D5F1F9BCC620004BF9B /* AssembleViewController.xib in Resources */,
@@ -274,8 +304,10 @@
 				798683E11F9B96EC00D7EE79 /* AppDelegate.swift in Sources */,
 				79A05D521F9BAFB50004BF9B /* ScannerViewController.swift in Sources */,
 				79A05D5A1F9BC6B10004BF9B /* UIColor+Application.swift in Sources */,
+				797076351FB62D000043F200 /* StatusCollectionViewCell.swift in Sources */,
 				799CF9301FAFACA600860684 /* CodeData.swift in Sources */,
 				799F43431F9BA74D005550C1 /* MainViewController.swift in Sources */,
+				79F16A471FB1054B004AEC9C /* ScannerStatusView.swift in Sources */,
 				799CF92E1FAFAA4D00860684 /* QRCode.swift in Sources */,
 				79A05D671F9BD54B0004BF9B /* UIView+Initialisation.swift in Sources */,
 				79A05D5E1F9BCC620004BF9B /* AssembleViewController.swift in Sources */,

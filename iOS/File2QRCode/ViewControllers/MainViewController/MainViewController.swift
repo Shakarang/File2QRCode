@@ -48,8 +48,7 @@ final class MainViewController: UIViewController {
 
 	@IBAction func scanButtonPressed(_ sender: Any) {
 		let vc = ScannerViewController.build()
-		vc.delegate = self
-	self.navigationController?.pushViewController(vc, animated: true)
+		self.navigationController?.present(vc, animated: true, completion: nil)
 	}
 }
 

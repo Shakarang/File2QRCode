@@ -20,15 +20,19 @@ protocol ScannerViewControllerDelegate: class {
 
 final class ScannerViewController: UIViewController {
 
+	@IBOutlet weak var statusView: ScannerStatusView!
+	
 	// MARK: - Initialisation
 
-	let captureSession: AVCaptureSession = AVCaptureSession()
+	private let captureSession: AVCaptureSession = AVCaptureSession()
 
-	var videoPreviewLayer: AVCaptureVideoPreviewLayer?
+	private var videoPreviewLayer: AVCaptureVideoPreviewLayer?
 
-	lazy var qrCodeFrameView: UIView = self.codeFrameView()
+	private lazy var qrCodeFrameView: UIView = self.codeFrameView()
 
 	weak var delegate: ScannerViewControllerDelegate?
+
+	private var codes = [Int: QRCode]()
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -36,6 +40,8 @@ final class ScannerViewController: UIViewController {
 		// Do any additional setup after loading the view.
 
 		self.codeCaptureInitialisation()
+
+		self.statusView.codes = self.codes
 	}
 
 	private func codeCaptureInitialisation() {
@@ -73,6 +79,8 @@ final class ScannerViewController: UIViewController {
 
 		// Start video capture.
 		self.captureSession.startRunning()
+
+		self.view.bringSubview(toFront: self.statusView)
 	}
 
 	private func codeFrameView() -> UIView {
@@ -100,7 +108,7 @@ extension ScannerViewController: AVCaptureMetadataOutputObjectsDelegate {
 			return
 		}
 
-		self.captureSession.stopRunning()
+//		self.captureSession.stopRunning()
 
 		guard let metadataObject = metadataObjects.first as? AVMetadataMachineReadableCodeObject,
 			metadataObject.type == .qr
@@ -112,14 +120,42 @@ extension ScannerViewController: AVCaptureMetadataOutputObjectsDelegate {
 
 		if let codeValue = metadataObject.stringValue {
 			self.delegate?.didFind(value: codeValue)
-			self.dismiss(animated: true, completion: nil)
 		}
 	}
 
 }
 
+extension ScannerViewController: ScannerViewControllerDelegate {
+	func didFind(value: String) {
+
+		guard let code = QRCode.fromStringData(value) else {
+			return
+		}
+
+		if self.codes[code.codeData.id] != nil {
+			return // Item already exists
+		}
+
+		if self.codes.count == 0 {
+			// First element, enables status view
+			self.statusView.codesNumber = code.codeData.elementsNumber
+			self.statusView.codesNumber = 2
+		}
+
+		self.codes[code.codeData.id] = code
+		self.statusView.codes = self.codes
+
+		if self.codes.count == code.codeData.elementsNumber {
+			// All data is here
+			print("All is here")
+		}
+	}
+}
+
 extension ScannerViewController {
 	class func build() -> ScannerViewController {
-		return ScannerViewController(nibName: nil, bundle: nil)
+		let vc = ScannerViewController(nibName: nil, bundle: nil)
+		vc.delegate = vc
+		return vc
 	}
 }
