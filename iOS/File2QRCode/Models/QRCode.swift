@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CryptoSwift
 
 /// QRCode object with its content
 class QRCode: Codable {
@@ -17,14 +18,29 @@ class QRCode: Codable {
 	/// Checksum of the data to ensure it is not corrupted
 	let checksum: String
 
+	private(set) var isValid: Bool = true
+
 	enum CodingKeys: String, CodingKey {
 		case codeData = "data"
 		case checksum
 	}
+}
 
-	var isValid: Bool {
-		
-		return true
+// MARK: - Code validity
+extension QRCode {
+	func check() {
+		let encoder = JSONEncoder()
+		guard let data = try? encoder.encode(codeData) else {
+			self.isValid = false
+			return
+		}
+
+		// Remove slash escaping characters
+		let codeString = String(data: data, encoding: .utf8)?.replacingOccurrences(of: "\\/", with: "/") ?? ""
+
+		if codeString.sha256() == self.checksum {
+			self.isValid = true
+		}
 	}
 }
 
@@ -35,6 +51,7 @@ extension QRCode {
 		do {
 			let data = value.data(using: .utf8)!
 			let code = try decoder.decode(QRCode.self, from: data)
+			code.check()
 			return code
 		} catch let e {
 			print(e)

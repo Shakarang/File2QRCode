@@ -21,5 +21,7 @@ class ActionButton: UIButton {
 
 		self.clipsToBounds = true
 		self.layer.cornerRadius = 3
+
+		self.titleLabel?.font = self.titleLabel?.font.withSize(20)
     }
 }

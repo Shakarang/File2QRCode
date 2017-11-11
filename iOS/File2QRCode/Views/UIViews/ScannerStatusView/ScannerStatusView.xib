@@ -31,8 +31,8 @@
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
                 </collectionView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Re2-HO-y3n">
-                    <rect key="frame" x="8" y="9" width="359" height="44"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Re2-HO-y3n" customClass="ActionButton" customModule="File2QRCode" customModuleProvider="target">
+                    <rect key="frame" x="16" y="9" width="343" height="44"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="44" id="sGn-Kz-v32"/>
                     </constraints>
@@ -46,8 +46,8 @@
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="BD7-O6-xBc" secondAttribute="trailing" id="THD-sl-lQx"/>
                 <constraint firstAttribute="bottom" secondItem="BD7-O6-xBc" secondAttribute="bottom" constant="8" id="dTA-iy-Fv0"/>
                 <constraint firstItem="BD7-O6-xBc" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="du0-xT-T8j"/>
-                <constraint firstItem="Re2-HO-y3n" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="gK0-Bp-F8U"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Re2-HO-y3n" secondAttribute="trailing" constant="8" id="uI4-7y-xL5"/>
+                <constraint firstItem="Re2-HO-y3n" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="gK0-Bp-F8U"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Re2-HO-y3n" secondAttribute="trailing" constant="16" id="uI4-7y-xL5"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>

@@ -22,6 +22,8 @@ final class ScannerViewController: UIViewController {
 
 	@IBOutlet weak var statusView: ScannerStatusView!
 	
+	@IBOutlet weak var statusViewBottomConstraint: NSLayoutConstraint!
+
 	// MARK: - Initialisation
 
 	private let captureSession: AVCaptureSession = AVCaptureSession()
@@ -41,6 +43,9 @@ final class ScannerViewController: UIViewController {
 
 		self.codeCaptureInitialisation()
 
+		self.statusViewBottomConstraint.constant = self.statusView.frame.height
+
+		self.statusView.delegate = self
 		self.statusView.codes = self.codes
 	}
 
@@ -108,6 +113,12 @@ extension ScannerViewController: AVCaptureMetadataOutputObjectsDelegate {
 			return
 		}
 
+		self.statusViewBottomConstraint.constant = 0
+
+		UIView.animate(withDuration: 0.5) {
+			self.view.layoutIfNeeded()
+		}
+
 //		self.captureSession.stopRunning()
 
 		guard let metadataObject = metadataObjects.first as? AVMetadataMachineReadableCodeObject,
@@ -139,17 +150,20 @@ extension ScannerViewController: ScannerViewControllerDelegate {
 		if self.codes.count == 0 {
 			// First element, enables status view
 			self.statusView.codesNumber = code.codeData.elementsNumber
-			self.statusView.codesNumber = 2
 		}
 
 		self.codes[code.codeData.id] = code
 		self.statusView.codes = self.codes
-
-		if self.codes.count == code.codeData.elementsNumber {
-			// All data is here
-			print("All is here")
-		}
 	}
+}
+
+extension ScannerViewController: ScannerStatusViewDelegate {
+
+	func shouldGoNext() {
+		let vc = AssembleViewController.build(withCodes: self.codes)
+		self.navigationController?.pushViewController(vc, animated: true)
+	}
+
 }
 
 extension ScannerViewController {

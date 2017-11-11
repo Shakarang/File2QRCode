@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol ScannerStatusViewDelegate: class {
+	func shouldGoNext()
+}
+
 class ScannerStatusView: UIView {
 	
 	@IBOutlet var contentView: UIView!
@@ -15,6 +19,8 @@ class ScannerStatusView: UIView {
 	@IBOutlet weak var nextButton: UIButton!
 
 	private var viewHeightConstraint: NSLayoutConstraint?
+
+	weak var delegate: ScannerStatusViewDelegate?
 	
 	var codes: [Int: QRCode] = [:] {
 		didSet {
@@ -90,28 +96,24 @@ class ScannerStatusView: UIView {
 		(self.collectionView.collectionViewLayout as? UICollectionViewFlowLayout)?.sectionInset = .init(top: 0, left: 8, bottom: 0, right: 8)
 	}
 
-	func ending() {
+	private func ending() {
 
 		self.collectionView.removeFromSuperview()
 		self.nextButton.isHidden = false
 
-		self.viewHeightConstraint?.constant = 70
+		self.viewHeightConstraint?.constant = 76
 		UIView.animate(withDuration: 0.5) {
 			self.superview?.layoutIfNeeded()
 		}
 	}
 
 	private func setNextButton() {
-
-		self.nextButton.backgroundColor = .mainColor
-
 		self.nextButton.setTitle("Next", for: .normal)
-		self.nextButton.setTitleColor(.white, for: .normal)
-		self.nextButton.titleLabel?.font = self.nextButton.titleLabel?.font.withSize(20)
+		self.nextButton.addTarget(self, action: #selector(nextButtonPressed), for: .touchUpInside)
+	}
 
-		self.nextButton.clipsToBounds = true
-		self.nextButton.layer.cornerRadius = 3
-
+	@objc private func nextButtonPressed() {
+		self.delegate?.shouldGoNext()
 	}
 }
 

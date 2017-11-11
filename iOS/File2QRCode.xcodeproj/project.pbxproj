@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		797076351FB62D000043F200 /* StatusCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797076331FB62D000043F200 /* StatusCollectionViewCell.swift */; };
 		797076361FB62D000043F200 /* StatusCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 797076341FB62D000043F200 /* StatusCollectionViewCell.xib */; };
+		797076391FB655700043F200 /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 797076381FB655700043F200 /* CryptoSwift.framework */; };
 		798683E11F9B96EC00D7EE79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798683E01F9B96EC00D7EE79 /* AppDelegate.swift */; };
 		798683E81F9B96EC00D7EE79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 798683E71F9B96EC00D7EE79 /* Assets.xcassets */; };
 		798683EB1F9B96EC00D7EE79 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 798683E91F9B96EC00D7EE79 /* LaunchScreen.storyboard */; };
@@ -32,6 +33,7 @@
 /* Begin PBXFileReference section */
 		797076331FB62D000043F200 /* StatusCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StatusCollectionViewCell.swift; path = StatusUICollectionViewCell/StatusCollectionViewCell.swift; sourceTree = "<group>"; };
 		797076341FB62D000043F200 /* StatusCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = StatusCollectionViewCell.xib; path = StatusUICollectionViewCell/StatusCollectionViewCell.xib; sourceTree = "<group>"; };
+		797076381FB655700043F200 /* CryptoSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CryptoSwift.framework; path = Carthage/Build/iOS/CryptoSwift.framework; sourceTree = "<group>"; };
 		798683DD1F9B96EC00D7EE79 /* File2QRCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = File2QRCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		798683E01F9B96EC00D7EE79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		798683E71F9B96EC00D7EE79 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				797076391FB655700043F200 /* CryptoSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,11 +77,20 @@
 			path = UICollectionViewCells;
 			sourceTree = "<group>";
 		};
+		797076371FB6556F0043F200 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				797076381FB655700043F200 /* CryptoSwift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		798683D41F9B96EC00D7EE79 = {
 			isa = PBXGroup;
 			children = (
 				798683DF1F9B96EC00D7EE79 /* File2QRCode */,
 				798683DE1F9B96EC00D7EE79 /* Products */,
+				797076371FB6556F0043F200 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -216,6 +228,7 @@
 				798683DA1F9B96EC00D7EE79 /* Frameworks */,
 				798683DB1F9B96EC00D7EE79 /* Resources */,
 				799F43451F9BA9E4005550C1 /* Swiftlint */,
+				7970763A1FB656BC0043F200 /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -279,6 +292,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		7970763A1FB656BC0043F200 /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/CryptoSwift.framework",
+			);
+			name = Carthage;
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/CryptoSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
 		799F43451F9BA9E4005550C1 /* Swiftlint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -442,6 +471,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JWHA9MBD3S;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = File2QRCode/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Shakarang.File2QRCode;
@@ -457,6 +490,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JWHA9MBD3S;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = File2QRCode/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Shakarang.File2QRCode;

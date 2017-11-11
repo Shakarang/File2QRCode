@@ -28,6 +28,8 @@ final class MainViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+
+		self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
 
 	override func viewWillAppear(_ animated: Bool) {
@@ -48,7 +50,7 @@ final class MainViewController: UIViewController {
 
 	@IBAction func scanButtonPressed(_ sender: Any) {
 		let vc = ScannerViewController.build()
-		self.navigationController?.present(vc, animated: true, completion: nil)
+		self.navigationController?.pushViewController(vc, animated: true)
 	}
 }
 

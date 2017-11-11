@@ -36,8 +36,13 @@ class StatusCollectionViewCell: UICollectionViewCell {
 		self.code = code
 		self.itemInformationLabel.text = "\(code.codeData.id + 1)"
 
-		self.imageView.image = UIImage(named: "check_symbol")!.withRenderingMode(.alwaysTemplate)
-		self.imageView.tintColor = .validColor
+		if code.isValid {
+			self.imageView.image = UIImage(named: "check_symbol")!.withRenderingMode(.alwaysTemplate)
+			self.imageView.tintColor = .validColor
+		} else {
+			self.imageView.image = UIImage(named: "fail_symbol")!.withRenderingMode(.alwaysTemplate)
+			self.imageView.tintColor = .errorColor
+		}
 
 		self.activityIndicator?.stopAnimating()
 		self.activityIndicator = nil
