@@ -25,7 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 		self.window?.makeKeyAndVisible()
 
-		UIApplication.shared.keyWindow?.tintColor = UIColor.mainColor
+		UIApplication.shared.keyWindow?.tintColor = UIColor.secondColor
 
 		return true
 	}

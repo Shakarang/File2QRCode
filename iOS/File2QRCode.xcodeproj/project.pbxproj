@@ -28,6 +28,9 @@
 		79A05D6B1F9BF0270004BF9B /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A05D6A1F9BF0270004BF9B /* ActionButton.swift */; };
 		79F16A451FB10543004AEC9C /* ScannerStatusView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79F16A441FB10543004AEC9C /* ScannerStatusView.xib */; };
 		79F16A471FB1054B004AEC9C /* ScannerStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F16A461FB1054B004AEC9C /* ScannerStatusView.swift */; };
+		79F209691FB863DE005327D6 /* PasswordProtectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F209671FB863DE005327D6 /* PasswordProtectViewController.swift */; };
+		79F2096A1FB863DE005327D6 /* PasswordProtectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79F209681FB863DE005327D6 /* PasswordProtectViewController.xib */; };
+		79F2096D1FB89367005327D6 /* Encryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F2096C1FB89367005327D6 /* Encryptor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +57,9 @@
 		79A05D6A1F9BF0270004BF9B /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
 		79F16A441FB10543004AEC9C /* ScannerStatusView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScannerStatusView.xib; sourceTree = "<group>"; };
 		79F16A461FB1054B004AEC9C /* ScannerStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerStatusView.swift; sourceTree = "<group>"; };
+		79F209671FB863DE005327D6 /* PasswordProtectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordProtectViewController.swift; sourceTree = "<group>"; };
+		79F209681FB863DE005327D6 /* PasswordProtectViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PasswordProtectViewController.xib; sourceTree = "<group>"; };
+		79F2096C1FB89367005327D6 /* Encryptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Encryptor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,8 +111,9 @@
 		798683DF1F9B96EC00D7EE79 /* File2QRCode */ = {
 			isa = PBXGroup;
 			children = (
-				799CF92C1FAFAA1E00860684 /* Models */,
 				79A05D581F9BC69E0004BF9B /* Extensions */,
+				79F2096B1FB8934D005327D6 /* Misc */,
+				799CF92C1FAFAA1E00860684 /* Models */,
 				799F43361F9BA670005550C1 /* ViewControllers */,
 				79A05D601F9BCD850004BF9B /* Views */,
 				798683E01F9B96EC00D7EE79 /* AppDelegate.swift */,
@@ -131,6 +138,7 @@
 			children = (
 				79A05D5B1F9BCB890004BF9B /* AssembleViewController */,
 				799F43401F9BA73E005550C1 /* MainViewController */,
+				79F209661FB863BD005327D6 /* PasswordProtectViewController */,
 				79A05D4F1F9BAF9B0004BF9B /* ScannerViewController */,
 			);
 			path = ViewControllers;
@@ -217,6 +225,23 @@
 			path = ScannerStatusView;
 			sourceTree = "<group>";
 		};
+		79F209661FB863BD005327D6 /* PasswordProtectViewController */ = {
+			isa = PBXGroup;
+			children = (
+				79F209671FB863DE005327D6 /* PasswordProtectViewController.swift */,
+				79F209681FB863DE005327D6 /* PasswordProtectViewController.xib */,
+			);
+			path = PasswordProtectViewController;
+			sourceTree = "<group>";
+		};
+		79F2096B1FB8934D005327D6 /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				79F2096C1FB89367005327D6 /* Encryptor.swift */,
+			);
+			path = Misc;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -284,6 +309,7 @@
 				798683E81F9B96EC00D7EE79 /* Assets.xcassets in Resources */,
 				79A05D5F1F9BCC620004BF9B /* AssembleViewController.xib in Resources */,
 				799F43441F9BA74D005550C1 /* MainViewController.xib in Resources */,
+				79F2096A1FB863DE005327D6 /* PasswordProtectViewController.xib in Resources */,
 				79A05D631F9BCDBE0004BF9B /* NoScanView.xib in Resources */,
 				79A05D531F9BAFB50004BF9B /* ScannerViewController.xib in Resources */,
 			);
@@ -329,6 +355,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79F2096D1FB89367005327D6 /* Encryptor.swift in Sources */,
+				79F209691FB863DE005327D6 /* PasswordProtectViewController.swift in Sources */,
 				79A05D651F9BCDCD0004BF9B /* NoScanView.swift in Sources */,
 				798683E11F9B96EC00D7EE79 /* AppDelegate.swift in Sources */,
 				79A05D521F9BAFB50004BF9B /* ScannerViewController.swift in Sources */,

@@ -10,6 +10,8 @@ import UIKit
 
 final class AssembleViewController: UIViewController {
 
+	@IBOutlet weak var shareButton: ActionButton!
+
 	// MARK: - Initialisation
 
 	private var recoveredFile: String!
@@ -18,8 +20,34 @@ final class AssembleViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+
+		self.setUI()
     }
 
+	private func setUI() {
+
+		self.view.backgroundColor = .mainColor
+
+		self.setShareButton()
+	}
+
+	private func setShareButton() {
+		self.shareButton.setTitle("Share", for: .normal)
+		self.shareButton.addTarget(self, action: #selector(shareAction), for: .touchUpInside)
+	}
+
+	@objc private func shareAction() {
+
+		let vc = PasswordProtectViewController.build(withRecoveredFile: self.recoveredFile)
+
+		self.navigationController?.pushViewController(vc, animated: true)
+
+//		let controller = UIActivityViewController(activityItems: [self.recoveredFile as AnyObject, #imageLiteral(resourceName: "QRCode")], applicationActivities: nil)
+//
+//		controller.excludedActivityTypes = [.postToFacebook, .postToVimeo, .postToFlickr, .postToTwitter, .postToTencentWeibo, .postToWeibo]
+//
+//		self.present(controller, animated: true, completion: nil)
+	}
 }
 
 extension AssembleViewController {

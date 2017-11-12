@@ -29,6 +29,8 @@ final class MainViewController: UIViewController {
 
         // Do any additional setup after loading the view.
 
+		self.view.backgroundColor = .mainColor
+
 		self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
 

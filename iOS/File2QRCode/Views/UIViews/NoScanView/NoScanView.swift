@@ -11,6 +11,7 @@ import SafariServices
 
 class NoScanView: UIView {
 
+	@IBOutlet var view: UIView!
 	@IBOutlet weak var descriptionLabel: UILabel!
 	@IBOutlet weak var githubLinkLabel: UILabel!
 
@@ -35,6 +36,9 @@ class NoScanView: UIView {
 	}
 
 	private func initElements() {
+
+		self.backgroundColor = .mainColor
+		self.view.backgroundColor = .mainColor
 
 		// Description
 		self.descriptionLabel.text = "Scan all your QR codes generated with File2QRCode desktop application in order to retrieve your entire file."

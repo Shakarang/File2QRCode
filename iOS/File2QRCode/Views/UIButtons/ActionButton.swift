@@ -15,9 +15,9 @@ class ActionButton: UIButton {
     override func draw(_ rect: CGRect) {
         // Drawing code
 
-		self.layer.backgroundColor = UIColor.mainColor.cgColor
+		self.layer.backgroundColor = UIColor.secondColor.cgColor
 
-		self.tintColor = UIColor.white
+		self.tintColor = .mainColor
 
 		self.clipsToBounds = true
 		self.layer.cornerRadius = 3
