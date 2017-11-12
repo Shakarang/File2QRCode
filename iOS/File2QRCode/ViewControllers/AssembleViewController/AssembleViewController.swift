@@ -41,12 +41,6 @@ final class AssembleViewController: UIViewController {
 		let vc = PasswordProtectViewController.build(withRecoveredFile: self.recoveredFile)
 
 		self.navigationController?.pushViewController(vc, animated: true)
-
-//		let controller = UIActivityViewController(activityItems: [self.recoveredFile as AnyObject, #imageLiteral(resourceName: "QRCode")], applicationActivities: nil)
-//
-//		controller.excludedActivityTypes = [.postToFacebook, .postToVimeo, .postToFlickr, .postToTwitter, .postToTencentWeibo, .postToWeibo]
-//
-//		self.present(controller, animated: true, completion: nil)
 	}
 }
 

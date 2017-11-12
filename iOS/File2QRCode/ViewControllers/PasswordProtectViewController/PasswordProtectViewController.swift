@@ -29,13 +29,13 @@ class PasswordProtectViewController: UIViewController {
 
 		self.view.backgroundColor = .mainColor
 
-		self.informationLabel.textColor = .secondColor
-		self.informationLabel.text = "AES 256 BLABLABLA"
+		self.informationLabel.textColor = .black
+		self.informationLabel.text = "Before sharing, please set a password in order to protect your data. It will be encrypted using AES-256, the safest encryption algorithm in the world. You'll be able to recover your data using the File2QRCode desktop tool."
 
 		self.passwordTextField.backgroundColor = UIColor.mainColor.darker(by: 10)
 		self.passwordTextField.superview?.backgroundColor = self.passwordTextField.backgroundColor
-		self.passwordTextField.tintColor = .secondColor
-		self.passwordTextField.textColor = .secondColor
+		self.passwordTextField.tintColor = .black
+		self.passwordTextField.textColor = .black
 		self.passwordTextField.isSecureTextEntry = true
 		self.passwordTextField.placeholder = "Enter your password"
 		self.passwordTextField.delegate = self
@@ -55,14 +55,26 @@ class PasswordProtectViewController: UIViewController {
 
 	@objc private func nextButtonClicked() {
 
-		guard let password = self.passwordTextField.text else {
+		guard let password = self.passwordTextField.text,
+			let encrypted = Encryptor.encrypt(self.recoveredString, toAESWithPassword: password) else {
 			return
 		}
 
-		let res = Encryptor.encrypt(self.recoveredString, toAESWithPassword: password)
+		let file = "file2QRCodeAES.txt"
 
-		print(res!)
+		guard let fileURL = ExportFileManager.createFile(named: file, withContent: encrypted) else {
+			return
+		}
 
+		let controller = UIActivityViewController(activityItems: [fileURL], applicationActivities: nil)
+
+		controller.excludedActivityTypes = [.postToFacebook, .postToVimeo, .postToFlickr, .postToTwitter, .postToTencentWeibo, .postToWeibo]
+		controller.completionWithItemsHandler = { (activityType, completed, items, error) in
+			// When user has shared the data, we delete the file
+			ExportFileManager.deleteFile(atURL: fileURL)
+		}
+
+		self.present(controller, animated: true, completion: nil)
 	}
 }
 

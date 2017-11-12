@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ScannerViewController" customModule="File2QRCode" customModuleProvider="target">
             <connections>
+                <outlet property="cancelButton" destination="ofL-VT-VC7" id="DZ7-cm-8XD"/>
                 <outlet property="statusView" destination="STx-30-66J" id="6LU-zm-wAs"/>
                 <outlet property="statusViewBottomConstraint" destination="8Lu-yX-cOz" id="YgD-th-ztL"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -28,12 +29,18 @@
                         <constraint firstAttribute="height" constant="115" id="6C9-cz-bWS"/>
                     </constraints>
                 </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ofL-VT-VC7">
+                    <rect key="frame" x="16" y="28" width="46" height="30"/>
+                    <state key="normal" title="Button"/>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="0.26686428270000001" blue="0.21291210999999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
             <constraints>
                 <constraint firstItem="STx-30-66J" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="8Lu-yX-cOz"/>
+                <constraint firstItem="ofL-VT-VC7" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="Qog-NL-U0X"/>
                 <constraint firstItem="STx-30-66J" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="doj-AV-bC7"/>
                 <constraint firstItem="STx-30-66J" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="k9N-Gr-FTw"/>
+                <constraint firstItem="ofL-VT-VC7" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="8" id="uGN-S8-5Zw"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="34.5" y="53.5"/>

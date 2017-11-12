@@ -31,6 +31,7 @@
 		79F209691FB863DE005327D6 /* PasswordProtectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F209671FB863DE005327D6 /* PasswordProtectViewController.swift */; };
 		79F2096A1FB863DE005327D6 /* PasswordProtectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79F209681FB863DE005327D6 /* PasswordProtectViewController.xib */; };
 		79F2096D1FB89367005327D6 /* Encryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F2096C1FB89367005327D6 /* Encryptor.swift */; };
+		79F2096F1FB8CE65005327D6 /* ExportFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F2096E1FB8CE65005327D6 /* ExportFileManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		79F209671FB863DE005327D6 /* PasswordProtectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordProtectViewController.swift; sourceTree = "<group>"; };
 		79F209681FB863DE005327D6 /* PasswordProtectViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PasswordProtectViewController.xib; sourceTree = "<group>"; };
 		79F2096C1FB89367005327D6 /* Encryptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Encryptor.swift; sourceTree = "<group>"; };
+		79F2096E1FB8CE65005327D6 /* ExportFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportFileManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -238,6 +240,7 @@
 			isa = PBXGroup;
 			children = (
 				79F2096C1FB89367005327D6 /* Encryptor.swift */,
+				79F2096E1FB8CE65005327D6 /* ExportFileManager.swift */,
 			);
 			path = Misc;
 			sourceTree = "<group>";
@@ -355,6 +358,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79F2096F1FB8CE65005327D6 /* ExportFileManager.swift in Sources */,
 				79F2096D1FB89367005327D6 /* Encryptor.swift in Sources */,
 				79F209691FB863DE005327D6 /* PasswordProtectViewController.swift in Sources */,
 				79A05D651F9BCDCD0004BF9B /* NoScanView.swift in Sources */,

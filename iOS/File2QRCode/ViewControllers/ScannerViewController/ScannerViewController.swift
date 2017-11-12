@@ -20,6 +20,7 @@ protocol ScannerViewControllerDelegate: class {
 
 final class ScannerViewController: UIViewController {
 
+	@IBOutlet weak var cancelButton: UIButton!
 	@IBOutlet weak var statusView: ScannerStatusView!
 	
 	@IBOutlet weak var statusViewBottomConstraint: NSLayoutConstraint!
@@ -47,6 +48,10 @@ final class ScannerViewController: UIViewController {
 
 		self.statusView.delegate = self
 		self.statusView.codes = self.codes
+
+		self.cancelButton.setTitle("Cancel", for: .normal)
+		self.cancelButton.setTitleColor(.white, for: .normal)
+		self.cancelButton.addTarget(self, action: #selector(cancel), for: .touchUpInside)
 	}
 
 	private func codeCaptureInitialisation() {
@@ -85,6 +90,7 @@ final class ScannerViewController: UIViewController {
 		// Start video capture.
 		self.captureSession.startRunning()
 
+		self.view.bringSubview(toFront: self.cancelButton)
 		self.view.bringSubview(toFront: self.statusView)
 	}
 
@@ -99,6 +105,10 @@ final class ScannerViewController: UIViewController {
 		self.view.bringSubview(toFront: codeFrameView)
 
 		return codeFrameView
+	}
+
+	@objc private func cancel() {
+		self.navigationController?.popViewController(animated: true)
 	}
 }
 
