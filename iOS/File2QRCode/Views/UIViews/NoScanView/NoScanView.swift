@@ -19,19 +19,19 @@ class NoScanView: UIView {
 
 	init() {
 		super.init(frame: CGRect.zero)
-		fromNib()
+		self.fromNib()
 		self.initElements()
 	}
 
 	override init(frame: CGRect) {
 		super.init(frame: frame)
-		fromNib()
+		self.fromNib()
 		self.initElements()
 	}
 
 	required init?(coder aDecoder: NSCoder) {
 		super.init(coder: aDecoder)
-		fromNib()
+		self.fromNib()
 		self.initElements()
 	}
 

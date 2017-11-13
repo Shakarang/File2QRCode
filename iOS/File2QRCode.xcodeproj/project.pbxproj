@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		796431CA1FBA306800C95134 /* UIColor+Adjustments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796431C91FBA306800C95134 /* UIColor+Adjustments.swift */; };
 		797076351FB62D000043F200 /* StatusCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797076331FB62D000043F200 /* StatusCollectionViewCell.swift */; };
 		797076361FB62D000043F200 /* StatusCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 797076341FB62D000043F200 /* StatusCollectionViewCell.xib */; };
 		797076391FB655700043F200 /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 797076381FB655700043F200 /* CryptoSwift.framework */; };
@@ -35,6 +36,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		796431C91FBA306800C95134 /* UIColor+Adjustments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Adjustments.swift"; sourceTree = "<group>"; };
 		797076331FB62D000043F200 /* StatusCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StatusCollectionViewCell.swift; path = StatusUICollectionViewCell/StatusCollectionViewCell.swift; sourceTree = "<group>"; };
 		797076341FB62D000043F200 /* StatusCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = StatusCollectionViewCell.xib; path = StatusUICollectionViewCell/StatusCollectionViewCell.xib; sourceTree = "<group>"; };
 		797076381FB655700043F200 /* CryptoSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CryptoSwift.framework; path = Carthage/Build/iOS/CryptoSwift.framework; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 		79A05D581F9BC69E0004BF9B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				796431C91FBA306800C95134 /* UIColor+Adjustments.swift */,
 				79A05D591F9BC6B10004BF9B /* UIColor+Application.swift */,
 				79A05D661F9BD54B0004BF9B /* UIView+Initialisation.swift */,
 			);
@@ -372,6 +375,7 @@
 				799CF92E1FAFAA4D00860684 /* QRCode.swift in Sources */,
 				79A05D671F9BD54B0004BF9B /* UIView+Initialisation.swift in Sources */,
 				79A05D5E1F9BCC620004BF9B /* AssembleViewController.swift in Sources */,
+				796431CA1FBA306800C95134 /* UIColor+Adjustments.swift in Sources */,
 				79A05D6B1F9BF0270004BF9B /* ActionButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

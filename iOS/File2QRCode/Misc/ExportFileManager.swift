@@ -19,8 +19,7 @@ class ExportFileManager {
 			do {
 				try content.write(to: fileURL, atomically: false, encoding: .utf8)
 				return fileURL
-			}
-			catch let error {
+			} catch let error {
 				print(error)
 			}
 		}

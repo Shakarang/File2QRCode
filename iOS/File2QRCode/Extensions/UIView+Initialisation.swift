@@ -17,9 +17,10 @@ extension UIView {
 		guard let contentView = Bundle.main.loadNibNamed(String(describing: type(of: self)), owner: self, options: nil)?.first as? T else {
 			return nil
 		}
-		self.addSubview(contentView)
 		contentView.translatesAutoresizingMaskIntoConstraints = false
+		self.addSubview(contentView)
 		contentView.layoutAttachAll(to: self)
+
 		return contentView
 	}
 
@@ -30,6 +31,7 @@ extension UIView {
 		constraints.append(NSLayoutConstraint(item: self, attribute: .right, relatedBy: .equal, toItem: parentView, attribute: .right, multiplier: 1.0, constant: 0))
 		constraints.append(NSLayoutConstraint(item: self, attribute: .top, relatedBy: .equal, toItem: parentView, attribute: .top, multiplier: 1.0, constant: 0))
 		constraints.append(NSLayoutConstraint(item: self, attribute: .bottom, relatedBy: .equal, toItem: parentView, attribute: .bottom, multiplier: 1.0, constant: 0))
+
 		parentView.addConstraints(constraints)
 	}
 }

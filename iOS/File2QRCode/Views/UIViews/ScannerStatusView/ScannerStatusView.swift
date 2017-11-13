@@ -14,7 +14,7 @@ protocol ScannerStatusViewDelegate: class {
 
 class ScannerStatusView: UIView {
 	
-	@IBOutlet var contentView: UIView!
+//	@IBOutlet var contentView: UIView!
 	@IBOutlet weak var collectionView: UICollectionView!
 	@IBOutlet weak var nextButton: UIButton!
 
@@ -39,22 +39,15 @@ class ScannerStatusView: UIView {
 
 	override init(frame: CGRect) {
 		super.init(frame: frame)
-		setup()
+
+		self.fromNib()
+		self.initUI()
 	}
 
 	required init?(coder aDecoder: NSCoder) {
 		super.init(coder: aDecoder)
-		setup()
-	}
 
-	private func setup() {
-		Bundle.main.loadNibNamed("ScannerStatusView", owner: self, options: nil)
-		guard let content = contentView else { return }
-		content.frame = self.bounds
-		content.autoresizingMask = [.flexibleHeight, .flexibleWidth]
-		self.contentView = content
-		self.addSubview(content)
-
+		self.fromNib()
 		self.initUI()
 	}
 
@@ -66,7 +59,6 @@ class ScannerStatusView: UIView {
 
 	private func initUI() {
 
-		self.contentView.backgroundColor = .clear
 		self.backgroundColor = .clear
 
 		let effect = UIBlurEffect(style: .light)

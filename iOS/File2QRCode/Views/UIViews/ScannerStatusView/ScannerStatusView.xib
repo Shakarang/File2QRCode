@@ -12,7 +12,6 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ScannerStatusView" customModule="File2QRCode" customModuleProvider="target">
             <connections>
                 <outlet property="collectionView" destination="BD7-O6-xBc" id="ra3-eZ-hEh"/>
-                <outlet property="contentView" destination="iN0-l3-epB" id="KeF-Ej-P0G"/>
                 <outlet property="nextButton" destination="Re2-HO-y3n" id="BQc-Ul-o7J"/>
             </connections>
         </placeholder>
