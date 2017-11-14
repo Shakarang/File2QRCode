@@ -20,8 +20,8 @@ class ActionButton: UIButton {
 		self.tintColor = .mainColor
 
 		self.clipsToBounds = true
-		self.layer.cornerRadius = 3
+		self.layer.cornerRadius = 6
 
-		self.titleLabel?.font = self.titleLabel?.font.withSize(20)
+		self.titleLabel?.font = UIFont.systemFont(ofSize: 20, weight: .medium)
     }
 }

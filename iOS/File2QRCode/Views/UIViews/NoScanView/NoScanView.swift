@@ -12,8 +12,10 @@ import SafariServices
 class NoScanView: UIView {
 
 	@IBOutlet var view: UIView!
+	@IBOutlet weak var titleLabel: UILabel!
 	@IBOutlet weak var descriptionLabel: UILabel!
-	@IBOutlet weak var githubLinkLabel: UILabel!
+	@IBOutlet weak var githubButton: UIButton!
+	
 
 	private let githubRepoString = "https://github.com/Shakarang/File2QRCode"
 
@@ -40,18 +42,19 @@ class NoScanView: UIView {
 		self.backgroundColor = .mainColor
 		self.view.backgroundColor = .mainColor
 
+		// Title
+		self.titleLabel.text = "Start recovering your files"
+		self.titleLabel.font = UIFont.systemFont(ofSize: 34, weight: .semibold)
+
 		// Description
 		self.descriptionLabel.text = "Scan all your QR codes generated with File2QRCode desktop application in order to retrieve your entire file."
+		self.descriptionLabel.font = UIFont.systemFont(ofSize: 15, weight: .regular)
 
-		// Github link
-		let underlineAttribute = [NSAttributedStringKey.underlineStyle: NSUnderlineStyle.styleSingle.rawValue]
-		let githubLinkString = NSAttributedString(string: self.githubRepoString, attributes: underlineAttribute)
-		self.githubLinkLabel.attributedText = githubLinkString
-		self.githubLinkLabel.font = self.githubLinkLabel.font.withSize(13)
-
-		let tapGesture = UITapGestureRecognizer(target: self, action: #selector(goToRepo))
-		self.githubLinkLabel.isUserInteractionEnabled = true
-		self.githubLinkLabel.addGestureRecognizer(tapGesture)
+		// Github Button
+		self.githubButton.setTitle("Check the repo on Github", for: .normal)
+		self.githubButton.setTitleColor(.secondColor, for: .normal)
+		self.githubButton.addTarget(self, action: #selector(goToRepo), for: .touchUpInside)
+		self.githubButton.titleLabel?.font = self.githubButton.titleLabel?.font.withSize(15)
 	}
 
 	@objc private func goToRepo() {

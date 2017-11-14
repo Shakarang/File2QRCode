@@ -12,7 +12,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NoScanView" customModule="File2QRCode" customModuleProvider="target">
             <connections>
                 <outlet property="descriptionLabel" destination="c8E-9O-hxF" id="SSm-yN-Tij"/>
-                <outlet property="githubLinkLabel" destination="Ony-rg-JHe" id="9IP-h0-jfo"/>
+                <outlet property="githubButton" destination="R6M-hL-0th" id="ZPa-UF-HLM"/>
+                <outlet property="titleLabel" destination="oTQ-Z6-2FC" id="h5V-oe-M6r"/>
                 <outlet property="view" destination="iN0-l3-epB" id="ote-BB-wJc"/>
             </connections>
         </placeholder>
@@ -22,32 +23,39 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Fef-9i-BWO">
-                    <rect key="frame" x="16" y="378.5" width="375" height="51"/>
+                    <rect key="frame" x="16" y="298" width="375" height="91"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c8E-9O-hxF">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oTQ-Z6-2FC">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="20.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="github url" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ony-rg-JHe">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c8E-9O-hxF">
                             <rect key="frame" x="0.0" y="30.5" width="375" height="20.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R6M-hL-0th">
+                            <rect key="frame" x="0.0" y="61" width="375" height="30"/>
+                            <state key="normal" title="Button"/>
+                        </button>
                     </subviews>
                 </stackView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="QRCode" translatesAutoresizingMaskIntoConstraints="NO" id="TqC-ZK-bHY">
-                    <rect key="frame" x="16" y="158.5" width="375" height="170"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shield" translatesAutoresizingMaskIntoConstraints="NO" id="TqC-ZK-bHY">
+                    <rect key="frame" x="16" y="168" width="375" height="90"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="90" id="icF-OW-D1b"/>
+                    </constraints>
                 </imageView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="TqC-ZK-bHY" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="2bl-MR-bfM"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Fef-9i-BWO" secondAttribute="trailing" constant="16" id="601-pG-89i"/>
-                <constraint firstItem="TqC-ZK-bHY" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" constant="-100" id="OSg-vj-hn8"/>
-                <constraint firstItem="Fef-9i-BWO" firstAttribute="top" secondItem="TqC-ZK-bHY" secondAttribute="bottom" constant="50" id="ZSo-kT-zQm"/>
+                <constraint firstItem="Fef-9i-BWO" firstAttribute="top" secondItem="TqC-ZK-bHY" secondAttribute="bottom" constant="40" id="TIc-bZ-7xY"/>
+                <constraint firstItem="Fef-9i-BWO" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="l6F-mu-Nbf"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="TqC-ZK-bHY" secondAttribute="trailing" constant="16" id="pev-0g-LhW"/>
                 <constraint firstItem="Fef-9i-BWO" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="rGE-HL-2XI"/>
             </constraints>
@@ -56,6 +64,6 @@
         </view>
     </objects>
     <resources>
-        <image name="QRCode" width="170" height="170"/>
+        <image name="shield" width="97" height="128"/>
     </resources>
 </document>
