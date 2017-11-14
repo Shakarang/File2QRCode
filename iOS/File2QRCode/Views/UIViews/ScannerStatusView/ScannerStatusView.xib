@@ -22,7 +22,6 @@
             <subviews>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="BD7-O6-xBc">
                     <rect key="frame" x="0.0" y="8" width="375" height="46"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="CKU-T4-GZA">
                         <size key="itemSize" width="50" height="50"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -31,14 +30,13 @@
                     </collectionViewFlowLayout>
                 </collectionView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Re2-HO-y3n" customClass="ActionButton" customModule="File2QRCode" customModuleProvider="target">
-                    <rect key="frame" x="16" y="9" width="343" height="44"/>
+                    <rect key="frame" x="16" y="5" width="343" height="52"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="44" id="sGn-Kz-v32"/>
+                        <constraint firstAttribute="height" constant="52" id="sGn-Kz-v32"/>
                     </constraints>
                     <state key="normal" title="Button"/>
                 </button>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="BD7-O6-xBc" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="CmP-M4-1y3"/>
                 <constraint firstItem="Re2-HO-y3n" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="H2U-GK-VPV"/>

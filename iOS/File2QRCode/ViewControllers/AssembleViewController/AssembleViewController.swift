@@ -10,6 +10,8 @@ import UIKit
 
 final class AssembleViewController: UIViewController {
 
+	@IBOutlet weak var titleLabel: UILabel!
+	@IBOutlet weak var descriptionLabel: UILabel!
 	@IBOutlet weak var shareButton: ActionButton!
 
 	// MARK: - Initialisation
@@ -29,6 +31,12 @@ final class AssembleViewController: UIViewController {
 		self.view.backgroundColor = .mainColor
 
 		self.setShareButton()
+
+		self.titleLabel.font = UIFont.titleFont
+		self.titleLabel.text = "Yeah ! You've recovered your file"
+
+		self.descriptionLabel.font = UIFont.descriptionFont
+		self.descriptionLabel.text = "Now you've recovered your file, let's share it securely."
 	}
 
 	private func setShareButton() {

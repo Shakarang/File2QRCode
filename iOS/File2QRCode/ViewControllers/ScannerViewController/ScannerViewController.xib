@@ -24,7 +24,7 @@
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="STx-30-66J" customClass="ScannerStatusView" customModule="File2QRCode" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="552" width="375" height="115"/>
-                    <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" red="0.57067781269999995" green="1" blue="0.49333580900000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="115" id="6C9-cz-bWS"/>
                     </constraints>

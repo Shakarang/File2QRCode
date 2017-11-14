@@ -15,7 +15,6 @@ class NoScanView: UIView {
 	@IBOutlet weak var titleLabel: UILabel!
 	@IBOutlet weak var descriptionLabel: UILabel!
 	@IBOutlet weak var githubButton: UIButton!
-	
 
 	private let githubRepoString = "https://github.com/Shakarang/File2QRCode"
 
@@ -44,11 +43,11 @@ class NoScanView: UIView {
 
 		// Title
 		self.titleLabel.text = "Start recovering your files"
-		self.titleLabel.font = UIFont.systemFont(ofSize: 34, weight: .semibold)
+		self.titleLabel.font = UIFont.titleFont
 
 		// Description
 		self.descriptionLabel.text = "Scan all your QR codes generated with File2QRCode desktop application in order to retrieve your entire file."
-		self.descriptionLabel.font = UIFont.systemFont(ofSize: 15, weight: .regular)
+		self.descriptionLabel.font = UIFont.descriptionFont
 
 		// Github Button
 		self.githubButton.setTitle("Check the repo on Github", for: .normal)

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7901F4ED1FBB9A12007F8F8C /* UIFont+Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7901F4EC1FBB9A12007F8F8C /* UIFont+Application.swift */; };
 		796431CA1FBA306800C95134 /* UIColor+Adjustments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796431C91FBA306800C95134 /* UIColor+Adjustments.swift */; };
 		797076351FB62D000043F200 /* StatusCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797076331FB62D000043F200 /* StatusCollectionViewCell.swift */; };
 		797076361FB62D000043F200 /* StatusCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 797076341FB62D000043F200 /* StatusCollectionViewCell.xib */; };
@@ -36,6 +37,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7901F4EC1FBB9A12007F8F8C /* UIFont+Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Application.swift"; sourceTree = "<group>"; };
 		796431C91FBA306800C95134 /* UIColor+Adjustments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Adjustments.swift"; sourceTree = "<group>"; };
 		797076331FB62D000043F200 /* StatusCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StatusCollectionViewCell.swift; path = StatusUICollectionViewCell/StatusCollectionViewCell.swift; sourceTree = "<group>"; };
 		797076341FB62D000043F200 /* StatusCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = StatusCollectionViewCell.xib; path = StatusUICollectionViewCell/StatusCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 				796431C91FBA306800C95134 /* UIColor+Adjustments.swift */,
 				79A05D591F9BC6B10004BF9B /* UIColor+Application.swift */,
 				79A05D661F9BD54B0004BF9B /* UIView+Initialisation.swift */,
+				7901F4EC1FBB9A12007F8F8C /* UIFont+Application.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -366,6 +369,7 @@
 				79F209691FB863DE005327D6 /* PasswordProtectViewController.swift in Sources */,
 				79A05D651F9BCDCD0004BF9B /* NoScanView.swift in Sources */,
 				798683E11F9B96EC00D7EE79 /* AppDelegate.swift in Sources */,
+				7901F4ED1FBB9A12007F8F8C /* UIFont+Application.swift in Sources */,
 				79A05D521F9BAFB50004BF9B /* ScannerViewController.swift in Sources */,
 				79A05D5A1F9BC6B10004BF9B /* UIColor+Application.swift in Sources */,
 				797076351FB62D000043F200 /* StatusCollectionViewCell.swift in Sources */,
