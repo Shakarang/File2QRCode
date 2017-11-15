@@ -92,7 +92,7 @@ class ScannerStatusView: UIView {
 	}
 
 	private func setNextButton() {
-		self.nextButton.setTitle("Next", for: .normal)
+		self.nextButton.setTitle(String.localized(withKey: .next), for: .normal)
 		self.nextButton.addTarget(self, action: #selector(nextButtonPressed), for: .touchUpInside)
 	}
 

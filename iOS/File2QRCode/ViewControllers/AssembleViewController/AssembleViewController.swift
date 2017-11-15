@@ -34,15 +34,15 @@ final class AssembleViewController: UIViewController {
 
 		// Title label
 		self.titleLabel.font = UIFont.titleFont
-		self.titleLabel.text = "Yeah ! You've recovered your file"
+		self.titleLabel.text = String.localized(withKey: .fileRecoveredTitle)
 
 		// Description label
 		self.descriptionLabel.font = UIFont.descriptionFont
-		self.descriptionLabel.text = "Now you've recovered your file, let's share it securely."
+		self.descriptionLabel.text = String.localized(withKey: .fileRecoveredDescription)
 	}
 
 	private func setShareButton() {
-		self.shareButton.setTitle("Share", for: .normal)
+		self.shareButton.setTitle(String.localized(withKey: .share), for: .normal)
 		self.shareButton.addTarget(self, action: #selector(shareAction), for: .touchUpInside)
 	}
 

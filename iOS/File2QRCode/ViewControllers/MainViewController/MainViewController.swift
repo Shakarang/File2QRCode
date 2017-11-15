@@ -11,7 +11,8 @@ import UIKit
 final class MainViewController: UIViewController {
 
 	@IBOutlet weak var contentView: UIView!
-
+	@IBOutlet weak var scanButton: ActionButton!
+	
 	enum State {
 		case initial, started
 	}
@@ -32,6 +33,8 @@ final class MainViewController: UIViewController {
 		self.view.backgroundColor = .mainColor
 
 		self.navigationController?.setNavigationBarHidden(true, animated: false)
+
+		self.scanButton.setTitle(String.localized(withKey: .scan), for: .normal)
     }
 
 	override func viewWillAppear(_ animated: Bool) {

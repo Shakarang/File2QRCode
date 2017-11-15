@@ -1,0 +1,27 @@
+/* 
+ Localizable.strings
+ File2QRCode
+ 
+ Created by Maxime Junger on 15/11/2017.
+ Copyright © 2017 Maxime Junger. All rights reserved.
+ */
+
+// Main VC
+"START_RECOVERING_TITLE" = "Start recovering your files";
+"APPLICATION_DESCRIPTION" = "Scan all your QR codes generated with File2QRCode desktop application in order to retrieve your entire file.";
+"CHECK_REPO_GITHUB" = "Check the repo on Github";
+
+// Finished scanning VC
+"FILE_RECOVERED_TITLE" = "Yeah ! You've recovered your file";
+"FILE_RECOVERED_DESCRIPTION" = "Now you've recovered your file, let's share it securely.";
+
+// Password setter VC
+"PASSWORD_FIELD_PLACEHOLDER" = "Enter your password";
+"ENCRYPTION_DESCRIPTION" = "Before sharing, please set a password in order to protect your data. It will be encrypted using AES-256, the safest encryption algorithm in the world. You'll be able to recover your data using the File2QRCode desktop tool.";
+
+// Buttons
+"SCAN" = "Scan";
+"NEXT" = "Next";
+"SHARE" = "Share";
+"GO_TO_BACK_MENU" = "Go to back menu";
+"CANCEL" = "Cancel";

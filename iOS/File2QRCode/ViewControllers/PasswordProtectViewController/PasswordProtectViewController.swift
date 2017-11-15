@@ -32,7 +32,7 @@ class PasswordProtectViewController: UIViewController {
 
 		// Information label
 		self.informationLabel.textColor = .black
-		self.informationLabel.text = "Before sharing, please set a password in order to protect your data. It will be encrypted using AES-256, the safest encryption algorithm in the world. You'll be able to recover your data using the File2QRCode desktop tool."
+		self.informationLabel.text = String.localized(withKey: .encryptionDescription)
 
 		// Password text field
 		self.passwordTextField.backgroundColor = UIColor.mainColor.darker(by: 5)
@@ -40,7 +40,7 @@ class PasswordProtectViewController: UIViewController {
 		self.passwordTextField.tintColor = .black
 		self.passwordTextField.textColor = .black
 		self.passwordTextField.isSecureTextEntry = true
-		self.passwordTextField.placeholder = "Enter your password"
+		self.passwordTextField.placeholder = String.localized(withKey: .passwordFieldPlaceholder)
 		self.passwordTextField.delegate = self
 
 		// UIView gesture
@@ -49,11 +49,11 @@ class PasswordProtectViewController: UIViewController {
 
 		// Next button
 		self.nextButton.isEnabled = false
-		self.nextButton.setTitle("Share", for: .normal)
+		self.nextButton.setTitle(String.localized(withKey: .share), for: .normal)
 		self.nextButton.addTarget(self, action: #selector(nextButtonClicked), for: .touchUpInside)
 
 		// Cancel button
-		self.cancelButton.setTitle("Go back to menu", for: .normal)
+		self.cancelButton.setTitle(String.localized(withKey: .goBackToMenu), for: .normal)
 		self.cancelButton.addTarget(self, action: #selector(goBackToMenu), for: .touchUpInside)
 		self.cancelButton.lightColors()
 	}

@@ -42,15 +42,15 @@ class NoScanView: UIView {
 		self.view.backgroundColor = .mainColor
 
 		// Title
-		self.titleLabel.text = "Start recovering your files"
+		self.titleLabel.text = String.localized(withKey: .startRecoveringTitle)
 		self.titleLabel.font = UIFont.titleFont
 
 		// Description
-		self.descriptionLabel.text = "Scan all your QR codes generated with File2QRCode desktop application in order to retrieve your entire file."
+		self.descriptionLabel.text = String.localized(withKey: .applicationDescription)
 		self.descriptionLabel.font = UIFont.descriptionFont
 
 		// Github Button
-		self.githubButton.setTitle("Check the repo on Github", for: .normal)
+		self.githubButton.setTitle(String.localized(withKey: .checkRepoGithub), for: .normal)
 		self.githubButton.setTitleColor(.secondColor, for: .normal)
 		self.githubButton.addTarget(self, action: #selector(goToRepo), for: .touchUpInside)
 		self.githubButton.titleLabel?.font = self.githubButton.titleLabel?.font.withSize(15)

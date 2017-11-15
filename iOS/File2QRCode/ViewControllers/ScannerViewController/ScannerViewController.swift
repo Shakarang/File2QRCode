@@ -57,7 +57,7 @@ final class ScannerViewController: UIViewController {
 		self.statusView.codes = self.codes
 
 		// Cancel button
-		self.cancelButton.setTitle("Cancel", for: .normal)
+		self.cancelButton.setTitle(String.localized(withKey: .cancel), for: .normal)
 		self.cancelButton.setTitleColor(.white, for: .normal)
 		self.cancelButton.addTarget(self, action: #selector(cancel), for: .touchUpInside)
 	}

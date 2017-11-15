@@ -14,7 +14,6 @@
 		797076391FB655700043F200 /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 797076381FB655700043F200 /* CryptoSwift.framework */; };
 		798683E11F9B96EC00D7EE79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798683E01F9B96EC00D7EE79 /* AppDelegate.swift */; };
 		798683E81F9B96EC00D7EE79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 798683E71F9B96EC00D7EE79 /* Assets.xcassets */; };
-		798683EB1F9B96EC00D7EE79 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 798683E91F9B96EC00D7EE79 /* LaunchScreen.storyboard */; };
 		799CF92E1FAFAA4D00860684 /* QRCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799CF92D1FAFAA4D00860684 /* QRCode.swift */; };
 		799CF9301FAFACA600860684 /* CodeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799CF92F1FAFACA600860684 /* CodeData.swift */; };
 		799F43431F9BA74D005550C1 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799F43411F9BA74D005550C1 /* MainViewController.swift */; };
@@ -28,6 +27,9 @@
 		79A05D651F9BCDCD0004BF9B /* NoScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A05D641F9BCDCD0004BF9B /* NoScanView.swift */; };
 		79A05D671F9BD54B0004BF9B /* UIView+Initialisation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A05D661F9BD54B0004BF9B /* UIView+Initialisation.swift */; };
 		79A05D6B1F9BF0270004BF9B /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A05D6A1F9BF0270004BF9B /* ActionButton.swift */; };
+		79B179171FBCF21D00C7EE02 /* String+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B179161FBCF21D00C7EE02 /* String+Localization.swift */; };
+		79B1791C1FBCFB1900C7EE02 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 79B1791E1FBCFB1900C7EE02 /* Localizable.strings */; };
+		79B179211FBCFBE000C7EE02 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79B179201FBCFBE000C7EE02 /* LaunchScreen.storyboard */; };
 		79F16A451FB10543004AEC9C /* ScannerStatusView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79F16A441FB10543004AEC9C /* ScannerStatusView.xib */; };
 		79F16A471FB1054B004AEC9C /* ScannerStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F16A461FB1054B004AEC9C /* ScannerStatusView.swift */; };
 		79F209691FB863DE005327D6 /* PasswordProtectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F209671FB863DE005327D6 /* PasswordProtectViewController.swift */; };
@@ -45,7 +47,6 @@
 		798683DD1F9B96EC00D7EE79 /* File2QRCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = File2QRCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		798683E01F9B96EC00D7EE79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		798683E71F9B96EC00D7EE79 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		798683EA1F9B96EC00D7EE79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		798683EC1F9B96EC00D7EE79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		799CF92D1FAFAA4D00860684 /* QRCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCode.swift; sourceTree = "<group>"; };
 		799CF92F1FAFACA600860684 /* CodeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeData.swift; sourceTree = "<group>"; };
@@ -60,6 +61,10 @@
 		79A05D641F9BCDCD0004BF9B /* NoScanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoScanView.swift; sourceTree = "<group>"; };
 		79A05D661F9BD54B0004BF9B /* UIView+Initialisation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Initialisation.swift"; sourceTree = "<group>"; };
 		79A05D6A1F9BF0270004BF9B /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
+		79B179161FBCF21D00C7EE02 /* String+Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localization.swift"; sourceTree = "<group>"; };
+		79B1791D1FBCFB1900C7EE02 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		79B1791F1FBCFB6300C7EE02 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		79B179201FBCFBE000C7EE02 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		79F16A441FB10543004AEC9C /* ScannerStatusView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScannerStatusView.xib; sourceTree = "<group>"; };
 		79F16A461FB1054B004AEC9C /* ScannerStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerStatusView.swift; sourceTree = "<group>"; };
 		79F209671FB863DE005327D6 /* PasswordProtectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordProtectViewController.swift; sourceTree = "<group>"; };
@@ -117,6 +122,7 @@
 		798683DF1F9B96EC00D7EE79 /* File2QRCode */ = {
 			isa = PBXGroup;
 			children = (
+				79B179201FBCFBE000C7EE02 /* LaunchScreen.storyboard */,
 				79A05D581F9BC69E0004BF9B /* Extensions */,
 				79F2096B1FB8934D005327D6 /* Misc */,
 				799CF92C1FAFAA1E00860684 /* Models */,
@@ -124,8 +130,8 @@
 				79A05D601F9BCD850004BF9B /* Views */,
 				798683E01F9B96EC00D7EE79 /* AppDelegate.swift */,
 				798683E71F9B96EC00D7EE79 /* Assets.xcassets */,
-				798683E91F9B96EC00D7EE79 /* LaunchScreen.storyboard */,
 				798683EC1F9B96EC00D7EE79 /* Info.plist */,
+				79B1791E1FBCFB1900C7EE02 /* Localizable.strings */,
 			);
 			path = File2QRCode;
 			sourceTree = "<group>";
@@ -175,6 +181,7 @@
 				79A05D591F9BC6B10004BF9B /* UIColor+Application.swift */,
 				79A05D661F9BD54B0004BF9B /* UIView+Initialisation.swift */,
 				7901F4EC1FBB9A12007F8F8C /* UIFont+Application.swift */,
+				79B179161FBCF21D00C7EE02 /* String+Localization.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -296,6 +303,7 @@
 			knownRegions = (
 				en,
 				Base,
+				fr,
 			);
 			mainGroup = 798683D41F9B96EC00D7EE79;
 			productRefGroup = 798683DE1F9B96EC00D7EE79 /* Products */;
@@ -314,9 +322,10 @@
 			files = (
 				797076361FB62D000043F200 /* StatusCollectionViewCell.xib in Resources */,
 				79F16A451FB10543004AEC9C /* ScannerStatusView.xib in Resources */,
-				798683EB1F9B96EC00D7EE79 /* LaunchScreen.storyboard in Resources */,
 				798683E81F9B96EC00D7EE79 /* Assets.xcassets in Resources */,
+				79B179211FBCFBE000C7EE02 /* LaunchScreen.storyboard in Resources */,
 				79A05D5F1F9BCC620004BF9B /* AssembleViewController.xib in Resources */,
+				79B1791C1FBCFB1900C7EE02 /* Localizable.strings in Resources */,
 				799F43441F9BA74D005550C1 /* MainViewController.xib in Resources */,
 				79F2096A1FB863DE005327D6 /* PasswordProtectViewController.xib in Resources */,
 				79A05D631F9BCDBE0004BF9B /* NoScanView.xib in Resources */,
@@ -367,6 +376,7 @@
 				79F2096F1FB8CE65005327D6 /* ExportFileManager.swift in Sources */,
 				79F2096D1FB89367005327D6 /* Encryptor.swift in Sources */,
 				79F209691FB863DE005327D6 /* PasswordProtectViewController.swift in Sources */,
+				79B179171FBCF21D00C7EE02 /* String+Localization.swift in Sources */,
 				79A05D651F9BCDCD0004BF9B /* NoScanView.swift in Sources */,
 				798683E11F9B96EC00D7EE79 /* AppDelegate.swift in Sources */,
 				7901F4ED1FBB9A12007F8F8C /* UIFont+Application.swift in Sources */,
@@ -387,12 +397,13 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		798683E91F9B96EC00D7EE79 /* LaunchScreen.storyboard */ = {
+		79B1791E1FBCFB1900C7EE02 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				798683EA1F9B96EC00D7EE79 /* Base */,
+				79B1791D1FBCFB1900C7EE02 /* en */,
+				79B1791F1FBCFB6300C7EE02 /* fr */,
 			);
-			name = LaunchScreen.storyboard;
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -402,6 +413,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -459,6 +471,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
