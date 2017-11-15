@@ -36,6 +36,10 @@ final class ScannerViewController: UIViewController {
 	/// Scanned codes
 	private var codes = [Int: QRCode]()
 
+	override var preferredStatusBarStyle: UIStatusBarStyle {
+		return .lightContent
+	}
+
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
@@ -166,7 +170,7 @@ extension ScannerViewController: ScannerViewControllerDelegate {
 		}
 
 		self.codes[code.codeData.id] = code
-		self.statusView.codes = self.codes
+		self.statusView.add(code: code)
 	}
 }
 

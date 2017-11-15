@@ -21,14 +21,7 @@ class ScannerStatusView: UIView {
 
 	weak var delegate: ScannerStatusViewDelegate?
 	
-	var codes: [Int: QRCode] = [:] {
-		didSet {
-			self.collectionView.reloadData()
-			if self.codes.count > 0 && self.codes.count == codesNumber {
-				self.ending()
-			}
-		}
-	}
+	var codes: [Int: QRCode] = [:]
 
 	var codesNumber: Int = 0 {
 		didSet {
@@ -105,6 +98,19 @@ class ScannerStatusView: UIView {
 
 	@objc private func nextButtonPressed() {
 		self.delegate?.shouldGoNext()
+	}
+
+	func add(code: QRCode) {
+		self.codes[code.codeData.id] = code
+		self.collectionView.reloadData()
+
+		self.collectionView.scrollToItem(at: IndexPath(item: code.codeData.id, section: 0),
+										 at: UICollectionViewScrollPosition.right,
+										 animated: true)
+		
+		if self.codes.count > 0 && self.codes.count == codesNumber {
+			self.ending()
+		}
 	}
 }
 

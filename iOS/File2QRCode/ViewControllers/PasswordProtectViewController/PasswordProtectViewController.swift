@@ -14,6 +14,7 @@ class PasswordProtectViewController: UIViewController {
 	@IBOutlet weak var passwordTextField: UITextField!
 	@IBOutlet weak var informationLabel: UILabel!
 	@IBOutlet weak var nextButton: ActionButton!
+	@IBOutlet weak var cancelButton: ActionButton!
 
 	/// String recovered with Scanner
 	private var recoveredString: String!
@@ -50,6 +51,11 @@ class PasswordProtectViewController: UIViewController {
 		self.nextButton.isEnabled = false
 		self.nextButton.setTitle("Share", for: .normal)
 		self.nextButton.addTarget(self, action: #selector(nextButtonClicked), for: .touchUpInside)
+
+		// Cancel button
+		self.cancelButton.setTitle("Go back to menu", for: .normal)
+		self.cancelButton.addTarget(self, action: #selector(goBackToMenu), for: .touchUpInside)
+		self.cancelButton.lightColors()
 	}
 
 	@objc private func dismissKeyboard() {
@@ -79,6 +85,12 @@ class PasswordProtectViewController: UIViewController {
 		}
 
 		self.present(controller, animated: true, completion: nil)
+	}
+
+	@objc private func goBackToMenu() {
+		if let vc = self.navigationController?.viewControllers.first(where: { $0 is MainViewController }) {
+			self.navigationController?.popToViewController(vc, animated: true)
+		}
 	}
 }
 
