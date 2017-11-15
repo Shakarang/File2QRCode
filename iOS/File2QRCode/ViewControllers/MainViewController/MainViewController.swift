@@ -50,6 +50,8 @@ final class MainViewController: UIViewController {
 		}
 	}
 
+	// MARK: - Actions
+
 	@IBAction func scanButtonPressed(_ sender: Any) {
 		let vc = ScannerViewController.build()
 		self.navigationController?.pushViewController(vc, animated: true)
@@ -75,6 +77,9 @@ extension MainViewController: ScannerViewControllerDelegate {
 // MARK: - Builder
 extension MainViewController {
 
+	/// Build MainViewController controller
+	///
+	/// - Returns: MainViewController
 	class func build() -> MainViewController {
 		return MainViewController(nibName: "MainViewController", bundle: nil)
 	}

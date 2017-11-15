@@ -11,10 +11,12 @@ import UIKit
 
 extension UIFont {
 
+	/// Font for title elements
 	static var titleFont: UIFont {
 		return UIFont.systemFont(ofSize: 34, weight: .semibold)
 	}
 
+	/// Font for description elements
 	static var descriptionFont: UIFont {
 		return UIFont.systemFont(ofSize: 15, weight: .regular)
 	}

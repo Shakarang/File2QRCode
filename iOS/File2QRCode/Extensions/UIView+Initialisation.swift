@@ -11,6 +11,9 @@ import UIKit
 
 extension UIView {
 
+	/// Initialise a view with its corresponding nib
+	///
+	/// - Returns: View
 	@discardableResult
 	func fromNib<T: UIView>() -> T? {
 
@@ -24,6 +27,9 @@ extension UIView {
 		return contentView
 	}
 
+	/// Attach view to parent view with all constraints
+	///
+	/// - Parameter parentView: View to attach new view to
 	func layoutAttachAll(to parentView: UIView) {
 		var constraints = [NSLayoutConstraint]()
 		self.translatesAutoresizingMaskIntoConstraints = false

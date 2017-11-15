@@ -13,8 +13,7 @@ protocol ScannerStatusViewDelegate: class {
 }
 
 class ScannerStatusView: UIView {
-	
-//	@IBOutlet var contentView: UIView!
+
 	@IBOutlet weak var collectionView: UICollectionView!
 	@IBOutlet weak var nextButton: UIButton!
 

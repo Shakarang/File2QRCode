@@ -16,7 +16,7 @@ final class AssembleViewController: UIViewController {
 
 	// MARK: - Initialisation
 
-	private var recoveredFile: String!
+	private var recoveredString: String!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,9 +32,11 @@ final class AssembleViewController: UIViewController {
 
 		self.setShareButton()
 
+		// Title label
 		self.titleLabel.font = UIFont.titleFont
 		self.titleLabel.text = "Yeah ! You've recovered your file"
 
+		// Description label
 		self.descriptionLabel.font = UIFont.descriptionFont
 		self.descriptionLabel.text = "Now you've recovered your file, let's share it securely."
 	}
@@ -44,15 +46,19 @@ final class AssembleViewController: UIViewController {
 		self.shareButton.addTarget(self, action: #selector(shareAction), for: .touchUpInside)
 	}
 
+	/// Action called when user presses the Share button.
 	@objc private func shareAction() {
-
-		let vc = PasswordProtectViewController.build(withRecoveredFile: self.recoveredFile)
-
+		let vc = PasswordProtectViewController.build(withRecoveredString: self.recoveredString)
 		self.navigationController?.pushViewController(vc, animated: true)
 	}
 }
 
 extension AssembleViewController {
+
+	/// Build AssembleViewController controller by initialising its recoveredString property with the given codes
+	///
+	/// - Parameter codes: Read codes
+	/// - Returns: AssembleViewController
 	class func build(withCodes codes: [Int: QRCode]) -> AssembleViewController {
 
 		let vc = AssembleViewController(nibName: nil, bundle: nil)
@@ -63,7 +69,7 @@ extension AssembleViewController {
 			recovered.append(codes[index]!.codeData.content)
 		}
 
-		vc.recoveredFile = recovered
+		vc.recoveredString = recovered
 
 		return vc
 	}

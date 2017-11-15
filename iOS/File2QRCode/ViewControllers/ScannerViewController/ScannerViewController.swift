@@ -28,13 +28,12 @@ final class ScannerViewController: UIViewController {
 	// MARK: - Initialisation
 
 	private let captureSession: AVCaptureSession = AVCaptureSession()
-
 	private var videoPreviewLayer: AVCaptureVideoPreviewLayer?
-
 	private lazy var qrCodeFrameView: UIView = self.codeFrameView()
 
 	weak var delegate: ScannerViewControllerDelegate?
 
+	/// Scanned codes
 	private var codes = [Int: QRCode]()
 
 	override func viewDidLoad() {
@@ -43,12 +42,17 @@ final class ScannerViewController: UIViewController {
 		// Do any additional setup after loading the view.
 
 		self.codeCaptureInitialisation()
+		self.setUI()
+	}
 
+	private func setUI() {
+
+		// Status view
 		self.statusViewBottomConstraint.constant = self.statusView.frame.height
-
 		self.statusView.delegate = self
 		self.statusView.codes = self.codes
 
+		// Cancel button
 		self.cancelButton.setTitle("Cancel", for: .normal)
 		self.cancelButton.setTitleColor(.white, for: .normal)
 		self.cancelButton.addTarget(self, action: #selector(cancel), for: .touchUpInside)
@@ -98,7 +102,7 @@ final class ScannerViewController: UIViewController {
 
 		let codeFrameView = UIView()
 
-		codeFrameView.layer.borderColor = UIColor.green.cgColor
+		codeFrameView.layer.borderColor = UIColor.secondColor.cgColor
 		codeFrameView.layer.borderWidth = 2
 
 		self.view.addSubview(codeFrameView)
@@ -119,17 +123,16 @@ extension ScannerViewController: AVCaptureMetadataOutputObjectsDelegate {
 		
 		if metadataObjects.count == 0 {
 			qrCodeFrameView.frame = CGRect.zero
-			print("Notihing detected")
 			return
 		}
 
-		self.statusViewBottomConstraint.constant = 0
-
-		UIView.animate(withDuration: 0.5) {
-			self.view.layoutIfNeeded()
+		// Animate only if it is the first code
+		if self.codes.count == 0 {
+			self.statusViewBottomConstraint.constant = 0
+			UIView.animate(withDuration: 0.5) {
+				self.view.layoutIfNeeded()
+			}
 		}
-
-//		self.captureSession.stopRunning()
 
 		guard let metadataObject = metadataObjects.first as? AVMetadataMachineReadableCodeObject,
 			metadataObject.type == .qr

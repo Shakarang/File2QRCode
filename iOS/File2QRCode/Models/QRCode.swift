@@ -44,8 +44,13 @@ extension QRCode {
 	}
 }
 
+// MARK: - Static initialiser
 extension QRCode {
 	
+	/// Init a QR Code object with a string JSON
+	///
+	/// - Parameter value: JSON in string
+	/// - Returns: QRCode object if the decode went well. Nil otherwise.
 	class func fromStringData(_ value: String) -> QRCode? {
 		let decoder = JSONDecoder()
 		do {

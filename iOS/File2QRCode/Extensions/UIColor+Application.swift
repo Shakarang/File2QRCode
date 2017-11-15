@@ -16,6 +16,7 @@ extension UIColor {
 		return UIColor.white
 	}
 
+	/// Color of elements (e.g. buttons)
 	static var secondColor: UIColor {
 		return UIColor(red: 0, green: 122.0/255.0, blue: 255.0/255.0, alpha: 1.0)
 	}
@@ -25,10 +26,12 @@ extension UIColor {
 		return .mainColor
 	}
 
+	/// Validation color (e.g. check mark)
 	static var validColor: UIColor {
 		return UIColor(red: 76.0/255.0, green: 217.0/255.0, blue: 100.0/255.0, alpha: 1.0)
 	}
 
+	/// Error color
 	static var errorColor: UIColor {
 		return UIColor(red: 255.0/255.0, green: 59.0/255.0, blue: 48.0/255.0, alpha: 1.0)
 	}
