@@ -45,7 +45,7 @@ USAGE:
    cli [global options] command [command options] [arguments...]
 
 VERSION:
-   0.0.1
+   1.0.0
 
 COMMANDS:
      help, h  Shows a list of commands or help for one command
@@ -66,7 +66,7 @@ GLOBAL OPTIONS:
 
 ### iOS application
 
-///// Video
+[![http://www.youtube.com/watch?v=_XMYY7ZbT0g](https://img.youtube.com/vi/_XMYY7ZbT0g/0.jpg)](http://www.youtube.com/watch?v=_XMYY7ZbT0g)
 
 ## Licenses
 
@@ -78,3 +78,7 @@ GLOBAL OPTIONS:
 ### iOS application
 
 - [github.com/krzyzanowskim/CryptoSwift](https://github.com/krzyzanowskim/CryptoSwift)
+
+### Design
+
+- [https://www.flaticon.com/packs/security-2](https://www.flaticon.com/packs/security-2)

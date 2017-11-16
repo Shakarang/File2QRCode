@@ -27,7 +27,7 @@ func main() {
 	app := cli.NewApp()
 	app.Name = "File2QRCode"
 	app.Usage = "Split a file into multiple QR Codes"
-	app.Version = "0.0.1"
+	app.Version = "1.0.0"
 
 	app.Flags = []cli.Flag{
 		cli.StringFlag{
