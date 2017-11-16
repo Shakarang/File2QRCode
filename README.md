@@ -72,9 +72,9 @@ GLOBAL OPTIONS:
 
 ### Command line application
 
-- [github.com/urfave/cli](github.com/urfave/cli)
-- [github.com/skip2/go-qrcode](github.com/skip2/go-qrcode)
+- [github.com/urfave/cli](https://github.com/urfave/cli)
+- [github.com/skip2/go-qrcode](https://github.com/skip2/go-qrcode)
 
 ### iOS application
 
-- [github.com/krzyzanowskim/CryptoSwift](github.com/krzyzanowskim/CryptoSwift)
+- [github.com/krzyzanowskim/CryptoSwift](https://github.com/krzyzanowskim/CryptoSwift)
